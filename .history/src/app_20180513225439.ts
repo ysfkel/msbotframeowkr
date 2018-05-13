@@ -20,17 +20,3 @@ server.listen(process.env.PORT||3978,()=>{
 
 server.post('/api/messages',connector.listen());
 
-bot.dialog('/',[
-    (sess, args, next)=>{
-          if(!sess.userData.name) {
-              builder.Prompts.text(sess, "Hello user, what is your name");
-          }else {
-               next();
-          }
-    },
-    (sess, result) => {
-       sess.userData.name= result.response;
-       sess.send("hello %s",sess.userData.name);
-    }
-])
-

@@ -1,6 +1,9 @@
-const builder = require('botbuilder');
-const restify =require('restify');
-require('dotenv').config();
+/// <reference path="../node_modules/botbuilder/lib/botbuilder.d.ts" />
+
+import * as builder from 'botbuilder';
+import * as  restify from 'restify';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const connector = new builder.ChatConnector();//.listen();
 //const connector = new builder.ChatConnector().listen();
@@ -25,3 +28,4 @@ server.post('/api/messages',connector.listen());
 //         sess.endDialog('hello ended');
 //     }
 // ])
+
