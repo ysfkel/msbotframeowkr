@@ -13,6 +13,28 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "type": "typescript",
+            "tsconfig": "base/tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "typescript",
+            "tsconfig": "amtrak/tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
