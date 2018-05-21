@@ -38,7 +38,7 @@ intents.onDefault([
     }
 ]);
 
-bot.dialog('/',intents)
+bot.dialog('/',intents);
 
 bot.dialog('/profile', [
       (sess, args, next) => {
